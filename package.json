@@ -1,0 +1,55 @@
+{
+  "name": "shiyan",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.12",
+    "@types/react": "16.9.5",
+    "@types/react-beautiful-dnd": "^11.0.3",
+    "@types/react-dom": "16.9.1",
+    "@types/react-redux": "^7.1.5",
+    "@types/redux-pack": "^0.1.4",
+    "antd": "^3.23.6",
+    "axios": "^0.19.0",
+    "gg-editor": "^3.0.0-beta.3",
+    "react": "^16.11.0",
+    "react-amap": "^1.2.8",
+    "react-beautiful-dnd": "^11.0.5",
+    "react-dnd": "^9.4.0",
+    "react-dnd-html5-backend": "^9.4.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-sortablejs": "^1.5.1",
+    "redux": "^4.0.4",
+    "redux-pack": "^0.1.5",
+    "redux-react-hook": "^3.4.0",
+    "redux-thunk": "^2.3.0",
+    "sortablejs": "^1.6.1",
+    "typescript": "3.6.4",
+    "websocket-heartbeat-js": "^1.0.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
