@@ -8,6 +8,7 @@ import {
   TradingView,
   DragSort,
   IndexDB,
+  ReactLazy,
   // Flow
 } from './pages';
 
@@ -53,6 +54,12 @@ const configRouter = [
     name: 'indexDB实践',
     icon: <Icon type="database" />,
     dom: IndexDB,
+  },
+  {
+    key: 'lazy',
+    name: 'React.lazy',
+    icon: <Icon type="sync" />,
+    dom: ReactLazy,
   }
 ]
 

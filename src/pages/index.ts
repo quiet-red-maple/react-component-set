@@ -6,3 +6,4 @@ export { default as TradingView } from './TradingView';
 export { default as DragSort } from './DragSort';
 // export { default as Flow } from './Flow';
 export { default as IndexDB } from './IndexDB';
+export { default as ReactLazy } from './ReactLazy';

@@ -13,15 +13,41 @@ interface Props {
   }
 }
 
+const beforeUpload = (file: any) => {
+  // 文件上传类型限制
+  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+  
+  const isZipOrRar = file.type === 'application/zip' || file.type === 'application/x-rar';
+  if (isZipOrRar) {
+    message.error('不可以上传zip或者rar格式的压缩包!');
+  }
+  return !isZipOrRar
+}
+
 const UploadFiles = (props: Props) => {
   const { getFieldDecorator } = props.form;
 
   const { label, name, rules, initialValue } = props.uploadConfig;
 
+  const defaultValue = (value: any) => {
+    // 整合默认已上传文件格式
+    if (!value) {
+      return value;
+    }
+    return value.map((item: any, index: number) => ({
+      ...item,
+      uid: item.id,
+      name: item.fileName,
+      url: item.fileUrl
+    }));
+  };
+
   const until = {
     name: 'file',
     multiple: true,
     defaultFileList: initialValue,
+    // defaultFileList: defaultValue(initialValue),
+    beforeUpload: beforeUpload,
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     onChange: (info: any) => {
       const { status } = info.file;
@@ -62,6 +88,7 @@ const UploadFiles = (props: Props) => {
     <Form.Item label={label}>
       {getFieldDecorator(`${name}`, {
         initialValue: initialValue,
+        // initialValue: defaultValue(initialValue),
         rules: rules,
         valuePropName: 'file',
         getValueFromEvent: normFile,
